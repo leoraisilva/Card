@@ -1,0 +1,1156 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+aside{
+    height: 100vh;
+}
+
+span {
+    color: #555555;
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* menu */
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside .menu-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+
+aside .menu-top .logo {
+    display: flex;
+    gap: .5rem;
+    padding-bottom: 2rem;
+}
+
+aside .menu-top .logo img {
+    width: 8rem;
+    height: 8rem;
+}
+
+aside .menu {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 60vh;
+    width: 13vw;
+    position: relative;
+    top: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: .2rem .3rem .5rem 0 #dfdada;
+    transition: all 0.3s ease;
+}
+aside .menu:hover{
+    box-shadow: none;
+}
+
+aside .menu div, aside .menu scan{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+    color: #555;
+}
+
+aside .menu div span{
+    font-size: 1.6rem;
+    transition: all .3s ease;
+}
+
+aside .menu div:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .menu div.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background: #555;
+}
+
+aside .menu div:hover{
+    color: #999999;
+}
+
+aside .menu div.active span {
+    color: #999999;
+    margin-left: calc(1rem - 3px);
+}
+
+aside .menu div:hover .publish, aside .menu div:hover .flag,
+aside .menu div:hover .settings, aside .menu div:hover .database,
+aside .menu div:hover .sd_card, aside .menu div:hover .person, 
+aside .menu div:hover .person_add, aside .menu div:hover .add_card,
+aside .menu div:hover .pedal_bike, aside .menu div:hover .logout,
+aside .menu div:hover .swipe_left, aside .menu div:hover .supervisor_account,
+aside .menu div:hover .favorite, aside .menu div:hover .move_up,
+aside .menu div:hover .dashboard, aside .menu div:hover .credit_card,
+aside .menu div:hover .share{
+    margin-left: 0.6rem;
+}
+
+/* corpo */
+main {
+    margin-top: 1.4rem;
+}
+
+.container-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: #555;
+    margin-left: 5rem;
+    width: 100%;
+    padding-bottom: 1.2rem;
+    position: fixed;
+    border-bottom: 0.1rem solid #999;
+}
+
+.header div:last-child{
+    position: absolute;
+    left: 80rem;
+    width: 100%;
+}
+
+.header span{
+    font-size: 2.4rem;
+    margin-right: 2rem;
+}
+
+/* Perfil */
+
+.content-perfil {
+    margin: 2rem;
+}
+
+.main-perfil {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+}
+
+.main-perfil:hover{
+    background: #eee;
+}
+
+.main-perfil .value-perfil {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-perfil .value-perfil p {
+    margin-left: 1.5rem;
+}
+
+.main-perfil h3, p{
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+/* Usuario-admin */
+
+.container_admin {
+    margin: 6rem;
+}
+
+.content_admin {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 60vw;
+    height: 35px;
+}
+
+.dados_admin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem .3rem 0 #999;
+}
+
+.dados_admin span{
+    font-size: 2.5rem;
+    color: #555555;
+    margin-left: 5rem;
+}
+
+.dados_admin h2{
+    font-size: 2rem;
+    color: #555555;
+    margin: 0 8rem 0 8rem;
+}
+.dados_admin h4{
+    font-size: 1.8rem;
+    color: #555555;
+}
+
+.dados_admin a span:hover {
+    color: #ff000f;
+    cursor: pointer;
+}
+
+/* pesquisa card */
+
+.container_search{
+    margin: 6rem;
+}
+
+.container_search .content_search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_search .content_search h2{
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #555555;
+}
+
+.layout_search {
+    font-size: 1.4rem;
+    color: #555555;
+}
+.layout_search{
+    display: flex;
+    flex-direction: row;
+}
+
+.layout_search input{
+    font-size: 1.4rem;
+    color: #555555;
+    background: #fff;
+    border: none;
+    height: 35px;
+    width: 20rem;
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem .3rem 0 #999;
+}
+
+.layout_search select{
+    font-size: .8rem;
+    color: #555555;
+    background: #fff;
+    border: none;
+    height: 35px;
+    width: 6rem;
+    margin-left: 2rem;
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem .3rem 0 #999;
+}
+
+.layout_search .bnt_search{
+    font-size: .8rem;
+    color: #555555;
+    margin-left: 2rem;
+    width: 6rem;
+    background: linear-gradient(45deg, rgb(9, 145, 31), #0000);
+    border-radius: .5rem;
+}
+
+/* modal */
+
+.modal_admin {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+}
+
+.modal_alterando_senha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    margin: 15% auto;
+    padding: 2.5rem;
+    border: .1rem solid #555;
+    width: 40%;
+    height: 20%;
+}
+
+.modal_alterando_senha h2{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.modal_alterando_senha label{
+    font-size: 1.4rem;
+    margin: 2rem 0 0 2rem;
+    color: #555;
+}
+
+.modal_alterando_senha input {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    background: #fff;
+    border: none;
+    height: 35px;
+    box-shadow: .5rem .5rem .3rem 0 #999;
+}
+
+.modal_alterando_senha .bnt-form{
+    margin-left: 2rem;
+    width: 6rem;
+    background: linear-gradient(45deg, rgb(9, 145, 31), #0000);
+    border-radius: .5rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Reports */
+
+.container_report{
+    margin: 8rem;
+}
+
+.content_report {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+}
+
+.content_report h2{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.content_report label{
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.content_report input, .content_report textarea{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    background: #fff;
+    border: none;
+    width: 100%;
+    height: 35px;
+    box-shadow: .5rem .5rem .3rem 0 #999;
+}
+
+.content_report .btn {
+    color: #555;
+    background: linear-gradient(45deg, rgb(9, 145, 31), #0000);
+    border-radius: .8rem;
+    margin-left: 0;
+}
+
+.container_report form textarea {
+    height: 280px;
+    resize: none;
+}
+
+/* report_card container */
+
+.report_card_container {
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .8rem;
+    text-align: left;
+    justify-content: center;
+
+}
+
+.report_card_content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .2rem;
+    background: #fff;
+    border: 1px solid #999;
+}
+
+.report_card_content:hover {
+    background: #ddd;
+}
+
+.report_card_content .user {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+.report_card_content .user h2{
+    color: #555;
+}
+
+.report_content .user span {
+    font-size: 2.4rem;
+    margin-right: 2rem;
+    color: #555;
+}
+
+.report_card_content h4 {
+    color: #555;
+}
+
+.report_card_content .motivo {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.report_card_content .descricao {
+    font-size: .9rem;
+}
+
+/* Configuração */
+
+
+.main-configuracao {
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    width: 50%;
+    margin: 10rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+}
+
+.main-configuracao:hover{
+    background: #ddd;
+}
+
+.main-configuracao .value-configuracao {
+    display: flex;
+    flex-direction: row;
+}
+
+.value-configuracao input{
+    font-size: 1.2rem;
+    background: #eee;
+    border: none;
+    width: 100%;
+    padding: .4rem;
+    margin: 1.2rem;
+    
+}
+
+.btn{
+    background: linear-gradient(45deg, rgb(9, 145, 31), #0000);
+    border: none;
+    color: #365237;
+    font-size: 1.2rem;
+    border-radius: .8rem;
+    width: 50%;
+    padding: .4rem;
+    margin: 1.2rem 5rem;
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+}
+
+
+.main-configuracao h3{
+    margin: 1rem;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+/* Cadastrar conta*/
+
+.cadastrar_part{
+    margin: 8rem;
+    display: flex;
+    align-content: center;
+}
+
+.cadastrar_part h2{
+    font-size: 2.4rem;
+    color: #555555;
+    margin-bottom: 2.4rem;
+}
+
+.cadastrar_content {
+    margin-left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cadastrar_content label{
+    font-size: 1.4rem;
+    color: #555555;
+    margin-bottom: .8rem;
+}
+
+.cadastrar_content input{
+    background: #fff;
+    margin-bottom: .8rem;
+    color: #365237;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .3rem .5rem 0 #999999;
+    width: 20rem;
+    height: 35px;
+}
+
+.cadastrar_content .btn_cadastrar{
+    background: linear-gradient(45deg, rgb(9, 145, 31), #0000);
+    border: none;
+    color: #365237;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    width: 20rem;
+    height: 35px;
+    margin-top: 1.4rem;
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+}
+
+/*criar vcard*/
+
+.content_vcard{
+    margin: 5rem;
+    color: #555555;
+}
+
+.content_vcard h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.content_vcard .cadastra_vcard{
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+    width: 40%;
+}
+
+.content_vcard .cadastra_vcard h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.cadastra_vcard .cadastra_frente {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.cadastra_vcard .nope_alterer{
+    padding: .4rem;
+    background: #999999;
+    color: #555555;
+    border: 0.1rem solid #000000;
+    border-radius: .5rem;
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+}
+
+.cadastra_vcard .cadastra_frente label{
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.cadastra_vcard .cadastra_frente input, textarea, select, .cadastra_vcard .cadastra_tras .val{
+    width: 100%;
+    height: 35px;
+    background: #ffffff;
+    border: none;
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+    border-radius: .8rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+.cadastra_vcard .cadastra_tras label {
+    margin-bottom: 1.5rem;
+}
+
+.cadastra_vcard .cadastra_frente select{
+    height: 50px;
+}
+
+.cadastra_vcard .cadastra_frente textarea{
+    height: 200px;
+    resize: none;
+}
+
+.content_vcard .cadastra_tras {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+
+}
+.content_vcard .cadastra_tras div{
+    margin: 0 0 1.2rem  1.5rem ;
+}
+
+.cadastra_vcard .cadastra_tras .valor{
+    color: darkblue;
+    margin: 1.5rem;
+}
+
+.cadastra_vcard .btn_vcard{
+    width: 100%;
+    height: 35px;
+    font-size: 1.4rem;
+    color: #555555;
+    background: linear-gradient(45deg, rgb(9, 145, 31), #0000);
+    box-shadow: .2rem .3rem .5rem .1rem #bebbbb;
+    border-radius: .5rem;
+}
+
+
+/* Recursivo */
+
+@media(max-width: 1815px){
+    .header div:last-child{
+        left: 60rem;
+    }
+
+    .content_admin {
+        width: 50vw;
+    }
+
+    .dados_admin span{
+        margin-left: 1rem;
+    }
+
+    .dados_admin h2{
+        margin: 0 2rem 0 2rem;
+    }
+
+
+}
+
+@media (max-width: 1600px){
+
+    aside .menu {
+        width: 18vw;
+        position: relative;
+
+    }
+
+    .header div:last-child{
+        left: 40rem;
+    }
+
+    .main-perfil {
+        margin-top: 5rem;
+        width: 75%;
+    }
+
+
+    .main-configuracao {
+        width: 35rem;
+    }
+
+
+    .container_card_report{
+        margin: 8rem;
+    }
+
+    .content_report {
+        max-width: 25rem;
+    }
+
+
+
+    .container_search{
+        margin: 4rem 0 2rem;
+    }
+
+    .layout_search{
+        max-width: 60rem;
+    }
+
+    .layout_search input{
+        width: 15rem;
+    }
+
+    .layout_search select{
+        width: 5rem;
+        margin-left: 0;
+    }
+
+    .layout_search .bnt_search{
+        margin-left: 0;
+        width: 5rem;
+    }
+
+
+}
+
+@media (max-width: 1150px){
+
+    .header div:last-child{
+        left: 20rem;
+    }
+
+    .content-perfil {
+        margin-left: 1rem;
+    }
+
+    aside .menu {
+        width: 13vw;
+        position: relative;
+
+    }
+
+    .main-perfil {
+        width: 60%;
+    }
+
+    aside .menu h3{
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+    aside .menu div{
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    aside .menu div.active::before{
+        content: '';
+        width: 6px;
+        height: 18px;
+        background: #555;
+    }
+
+    .content_admin {
+        margin-bottom: 3rem;
+        width: 25rem;
+    }
+
+    .dados_admin {
+        padding: .3rem;
+    }
+
+    .dados_admin span{
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .dados_admin h2{
+        font-size: 1rem;
+        margin: 0 .8rem 0 .8rem;
+    }
+    .dados_admin h4{
+        font-size: 1.2rem;
+    }
+
+
+    .report_card_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .8rem;
+    }
+
+    .main-configuracao {
+        margin: 4rem;
+    }
+
+
+    .container_card_report{
+        margin: 8rem;
+    }
+
+    .content_report {
+        margin: -3rem;
+        width: 50rem;
+    }
+
+
+    .container_search{
+        margin: 3.5rem;
+    }
+
+    .layout_search input{
+        width: 12rem;
+    }
+
+    .layout_search select{
+        height: 35px;
+        width: 4rem;
+        margin-left: 0;
+
+    }
+
+    .layout_search .bnt_search{
+        margin-left: 0;
+        width: 4rem;
+    }
+
+
+}
+
+@media (max-width: 850px){
+
+    main {
+        margin-left: -6rem;
+    }
+
+    .header div:last-child{
+        left: 17rem;
+    }
+
+    .main-perfil {
+        width: 75%;
+        margin: 4rem;
+    }
+
+    aside .menu {
+        height: 60vh;
+        width: 13vw;
+    }
+
+    .report_card_container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 450px){
+
+
+    body{
+        font-size: 1rem;
+        width: 20vw;
+    }
+
+
+    .container{
+        display: grid;
+        width: 90%;
+        grid-template-columns: 6.4rem auto 8rem;
+    }
+
+    aside .menu-top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.4rem;
+    }
+
+    aside .menu-top .logo {
+        display: flex;
+        gap: .5rem;
+        padding-bottom: 2rem;
+    }
+
+    aside .menu-top .logo img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    aside .menu {
+        width: 25vw;
+
+    }
+
+/* cadastro vcard*/
+
+    .content_vcard{
+        margin: 5rem;
+        color: #555555;
+    }
+
+    .content_vcard h2{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .content_vcard .cadastra_vcard{
+        margin-left: 2rem;
+        width: 100%;
+    }
+
+    .content_vcard .cadastra_vcard h2{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .cadastra_vcard .cadastra_frente {
+        margin-bottom: 2rem;
+    }
+
+    .cadastra_vcard .nope_alterer{
+        width: 14rem;
+    }
+
+    .cadastra_vcard .cadastra_frente label{
+        width: 14rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .cadastra_vcard .cadastra_frente input, textarea, select, .cadastra_vcard .cadastra_tras .val{
+        width: 14rem;
+        margin-bottom: 1.2rem;
+        font-size: 1rem;
+    }
+    .cadastra_vcard .cadastra_tras label {
+        margin-bottom: 1.5rem;
+    }
+
+    .cadastra_vcard .cadastra_frente select{
+        width: 14rem;
+    }
+
+    .cadastra_vcard .cadastra_frente textarea{
+        width: 14rem;
+    }
+
+    .content_vcard .cadastra_tras {
+        font-size: 1rem;
+
+    }
+    .content_vcard .cadastra_tras div{
+        margin: 0 0 .8rem  1rem ;
+    }
+
+    .cadastra_vcard .cadastra_tras .valor{
+        margin: .8rem;
+    }
+
+    .cadastra_vcard .btn_vcard{
+        width: 14rem;
+        font-size: 1rem;
+    }
+
+    /* perfil */
+
+
+
+    .main-perfil {
+        width: 65%;
+    }
+
+    .main-perfil .value-perfil p {
+        margin-left: 1rem;
+    }
+
+    .main-perfil h3, p{
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* Cadastrar conta */
+
+
+
+    .main-configuracao {
+        width: 105%;
+        padding: .2rem;
+    }
+
+    .value-configuracao input{
+        font-size: 1rem;
+        width: 100%;
+        margin: .2rem;
+
+    }
+
+    .btn{
+        font-size: 1rem;
+        width: 50%;
+        margin: .8rem 2rem;
+    }
+
+    .main-configuracao h3{
+        margin: 1rem;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* Cadastrar conta*/
+
+    .cadastrar_part{
+        margin: 4rem;
+    }
+
+    .cadastrar_part h2{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .cadastrar_content {
+        margin-left: 1rem;
+    }
+
+    .cadastrar_content label{
+        font-size: 1rem;
+        margin-bottom: .2rem;
+    }
+
+    .cadastrar_content input{
+        margin-bottom: .2rem;
+        font-size: .8rem;
+        width: 15rem;
+    }
+
+    .cadastrar_content .btn_cadastrar{
+        font-size: 1rem;
+        width: 15rem;
+    }
+
+    /* Reports */
+
+    .content_report {
+        display: flex;
+        flex-direction: column;
+        max-width: 35%;
+
+    }
+
+    .content_report h2{
+        font-size: 1.2rem;
+        margin-bottom: .2rem;
+        color: #555;
+    }
+
+    .content_report label{
+        font-size: 1rem;
+
+    }
+
+    .content_report input, .content_report textarea{
+        margin-bottom: .2rem;
+        font-size: 1rem;
+    }
+
+    .container_report form textarea {
+        height: 200px;
+    }
+
+    /* pesquisa */
+
+
+
+    .container_search{
+        margin: 6rem;
+    }
+
+    .container_search .content_search{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .container_search .content_search h2{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .container_search .content_search form {
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout_search input{
+        font-size: 0.8rem;
+        height: 35px;
+        width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    .layout_search select{
+        font-size: 0.8rem;
+        height: 35px;
+        width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    .layout_search .bnt_search{
+        font-size: 0.8rem;
+        height: 35px;
+        width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+
+}
+@media (max-height: 700px) {
+
+    aside .menu {
+        height: 70vh;
+    }
+
+    aside .menu div:last-child{
+        bottom: 1rem;
+    }
+}
+
+@media (max-height: 540px) {
+
+    aside .menu {
+        height: 80vh;
+    }
+
+    aside .menu div:last-child{
+        bottom: 1rem;
+    }
+}

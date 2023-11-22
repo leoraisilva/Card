@@ -1,0 +1,12 @@
+{
+    "name": "leoraisilva/p2",
+    "authors": [
+        {
+            "name": "leoraisilva",
+            "email": "lraimundo409@gmail.com"
+        }
+    ],
+    "require": {
+        "chillerlan/php-qrcode": "^4.3"
+    }
+}
